@@ -1,0 +1,30 @@
+{{> header }} <!--Template partials/header-->
+<section class="blog">
+    <div class="row">
+        <div class="col-sm-9">
+            {{# each items}}
+            <div class="posts clearfix">
+               <div class="img-post">
+                    <img src="/images/uploads/{{mainimage}}" width="160" height="150" class="img-responsive">
+                </div>
+                <h4><a href="/post/show/{{id}}">{{title}}</a></h4>
+                <p class="author">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <span>{{author}}</span>
+                </p>
+                <p class="date">
+                    <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                    <span><a href="/post/{{category}}">{{category}}</a></span>
+                </p>
+                <p class="body-posts">{{body}}</p>
+                <div class="read-me">
+                    <a href="/post/show/{{id}}"><img src="/images/hand.png" class="hand" alt="">
+                    <span>Read Me...</span></a>
+                </div>
+                <p>{{catname}}</p>
+            </div>
+           {{/each}}
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</section>

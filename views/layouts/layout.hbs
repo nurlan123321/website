@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Express Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    {{> menu}}   <!--Template partials/menu-->
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3 msg">
+                {{#if success_msg}}
+                <div class="alert alert-success"><span class="msg-text">{{success_msg}}</span></div>
+                {{/if}}
+                  {{#if error_msg}}
+                <div class="alert alert-danger">{{error_msg}}</div>
+                {{/if}}
+                  {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+                {{/if}}
+                
+            </div>
+        </div>
+        {{{body}}}
+    </div>
+    
+    {{> footer}} <!--Template partials/footer-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+    
+</body>
+</html>

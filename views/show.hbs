@@ -1,0 +1,20 @@
+{{> header }} <!--Template partials/header-->
+<section class="blog">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="post-detail">
+                <div class="img-post">
+                    <img src="/images/uploads/{{post.mainimage}}" width="160" height="150" class="img-responsive">
+                </div>
+                <h4>{{post.title}}</h4>
+                <p class="author">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <span>{{post.author}}</span>
+                </p>
+                <p class="body-posts">{{post.body}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
